@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "812697408938",
+    "firebase_url": "https://b7m3cc-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "b7m3cc",
+    "storage_bucket": "b7m3cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812697408938:android:ab7c3498c62e6aebb447d3",
+        "android_client_info": {
+          "package_name": "com.amoz.b7m3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812697408938-1u25j4c1720kmkt96h2jpbui2eaered4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9z2IQrII-jOZs8zmd7W3csLjZXGFKUPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812697408938-1u25j4c1720kmkt96h2jpbui2eaered4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/myAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_menu_24"
+            app:title="@string/txt_PAGETITLE" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="end">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay_macDet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:focusableInTouchMode="true"
+            android:clickable="true"
+            android:focusable="true" >
+
+            <Button
+                android:id="@+id/btn_macSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/btn_set"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/btn_macCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/red"
+                android:text="@string/btn_cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_macName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Machine Name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/lbl_temp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lbl_hydLvl"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_macName" />
+
+            <TextView
+                android:id="@+id/vTxt_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_DOTS"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_temp"
+                app:layout_constraintStart_toStartOf="@+id/vTxt_hydLvl"
+                app:layout_constraintTop_toTopOf="@+id/lbl_temp"
+                app:layout_constraintVertical_bias="0.50" />
+
+            <TextView
+                android:id="@+id/lbl_hydLvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/lbl_hydLvl"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lbl_lubLvl"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_temp" />
+
+            <TextView
+                android:id="@+id/vTxt_hydLvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_DOTS"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_hydLvl"
+                app:layout_constraintStart_toStartOf="@+id/vTxt_lubLvl"
+                app:layout_constraintTop_toTopOf="@+id/lbl_hydLvl" />
+
+            <TextView
+                android:id="@+id/lbl_lubLvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/lbl_lubLvl"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lbl_hydPre"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_hydLvl" />
+
+            <TextView
+                android:id="@+id/vTxt_lubLvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_DOTS"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_lubLvl"
+                app:layout_constraintStart_toStartOf="@+id/vTxt_hydPre"
+                app:layout_constraintTop_toTopOf="@+id/lbl_lubLvl" />
+
+            <TextView
+                android:id="@+id/lbl_hydPre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/lbl_hydPre"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lbl_chkPre"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_lubLvl" />
+
+            <TextView
+                android:id="@+id/vTxt_hydPre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/txt_DOTS"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_hydPre"
+                app:layout_constraintStart_toEndOf="@+id/lbl_hydPre"
+                app:layout_constraintTop_toTopOf="@+id/lbl_hydPre" />
+
+            <TextView
+                android:id="@+id/lbl_chkPre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/lbl_chkPre"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lbl_maxSpeed"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_hydPre" />
+
+            <TextView
+                android:id="@+id/vTxt_chkPre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_DOTS"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_chkPre"
+                app:layout_constraintStart_toStartOf="@+id/vTxt_hydPre"
+                app:layout_constraintTop_toTopOf="@+id/lbl_chkPre" />
+
+
+            <EditText
+                android:id="@+id/inp_maxSpeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="@string/hint_velocity"
+                android:inputType="number"
+                android:textColorHint="@drawable/selector"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/lbl_maxSpeed"
+                app:layout_constraintTop_toTopOf="@+id/lbl_maxSpeed" />
+
+            <TextView
+                android:id="@+id/lbl_maxSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/lbl_maxSpeed"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_chkPre" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myAppBarLayout"
+            app:menu="@menu/menu" >
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

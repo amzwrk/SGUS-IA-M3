@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/myAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_menu_24"
+            app:title="@string/txt_PAGETITLE" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="end">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+
+            <ImageButton
+                android:id="@+id/btn_machineStatus_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/btn_machineStatus_reset"
+                android:minWidth="32dp"
+                android:minHeight="32dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_mainStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lbl_mainStatus"
+                app:layout_constraintVertical_bias="0.50"
+                app:srcCompat="@android:drawable/presence_invisible" />
+
+            <TextView
+                android:id="@+id/lbl_mainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Cloud Control"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_mainEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/lbl_velocity"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_mainPhone"
+                app:layout_constraintEnd_toStartOf="@+id/vTxt_mainEmail" />
+
+            <TextView
+                android:id="@+id/vTxt_mainEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="@string/txt_DOTS"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_mainEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lbl_mainEmail" />
+
+            <TextView
+                android:id="@+id/lbl_mainPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/lbl_acceleration"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_mainEmail" />
+
+            <TextView
+                android:id="@+id/vTxt_mainPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_DOTS"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_mainPhone"
+                app:layout_constraintEnd_toEndOf="@+id/vTxt_mainEmail" />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/green"
+                android:text="@string/btn_start"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_mainTitle"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_mainStatus"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:text="@string/btn_stop"
+                android:textAlignment="center"
+                app:iconPadding="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_start"
+                app:layout_constraintStart_toStartOf="@+id/lbl_mainTitle"
+                app:layout_constraintTop_toTopOf="@+id/btn_start"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/lbl_mainIntro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/lbl_mainIntro"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_mainTitle" />
+
+            <TextView
+                android:id="@+id/lbl_mainStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="@string/lbl_machineStatus"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_mainEmail"
+                app:layout_constraintEnd_toStartOf="@+id/btn_machineStatus_reset"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_mainIntro"
+                app:layout_constraintVertical_bias="0.35" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Emergency Contact Info"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_mainEmail"
+                app:layout_constraintEnd_toEndOf="@+id/vTxt_mainEmail"
+                app:layout_constraintStart_toStartOf="@+id/lbl_mainPhone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myAppBarLayout"
+            app:menu="@menu/menu">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

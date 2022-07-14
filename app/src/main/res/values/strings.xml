@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Cloud Control - B7M3</string>
+
+    <string name="txt_PAGETITLE">SOMETHING</string>
+    <string name="txt_OFFLINE">[OFFLINE]</string>
+    <string name="txt_DOTS">...</string>
+    <string name="txt_EMPTY"> a</string>
+
+    <string name="activity_main">CCtrl: Home </string>
+    <string name="lbl_machineStatus">Overall Machine Status :</string>
+    <string name="var_machineStatus_x">Abnormal</string>
+    <string name="var_machineStatus_0">Stopped</string>
+    <string name="var_machineStatus_1">Running</string>
+    <string name="btn_machineStatus_reset">RESET</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_setting">SETTING</string>
+    <string name="lbl_mainIntro">Cloud Control is a Demo App which simulates Remote Monitoring and Control of machinery on the factory floor</string>
+
+    <string name="activity_setting">CCtrl: Setting</string>
+    <string name="lbl_eContact">Emergency Contact Details</string>
+    <string name="lbl_velocity">Email :</string>
+    <string name="hint_velocity">(integers only)</string>
+    <string name="lbl_acceleration">Phone :</string>
+    <string name="hint_acceleration">(integers only)</string>
+    <string name="btn_set">Set</string>
+    <string name="btn_home">HOME</string>
+    <string name="snk_errEmail">INVALID EMAIL FORMAT</string>
+    <string name="snk_errPhone">INVALID PHONE NUMBER FORMAT</string>
+
+    <string name="activity_testing">CC - Testing</string>
+    <string name="toggle_open">open</string>
+    <string name="toggle_close">close</string>
+
+    <string name="activity_list">CCtrl: Machine List</string>
+
+    <string name="activity_details">CCtrl: Machine Details</string>
+    <string name="lbl_maxSpeed">Max Speed :</string>
+    <string name="lbl_hydPre">Hydraulic Pressure :</string>
+    <string name="lbl_hydLvl">Hydraulic Oil Level :</string>
+    <string name="lbl_chkPre">Chuck Pressure :</string>
+    <string name="lbl_lubLvl">Lubricant Level :</string>
+    <string name="lbl_temp">Temperature :</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="snk_noExit">Press [Cancel] to Exit</string>
+    <string name="hint_maxSpeed">(Click2Edit)</string>
+
+</resources>
